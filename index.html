@@ -1,39 +1,46 @@
 <!DOCTYPE html>
+<html lang="en">
 
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title></title>
     <meta name="description" content="">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="main.css">
 </head>
 
 <body>
-    <div id="calculator">
-        <h4>Bill Amount</h4>
+    <div class="text-center" id="calculator">
+        <h5>Bill Amount</h5>
         <input type="number" min="1" max="1000000" v-model.number="bill">
-        <h4>Tip Percentage</h4>
+        <!-- <div class="input-group mb-3">
+            <div class="input-group-prepend">
+                <span class="input-group-text">$</span>
+            </div>
+            <input type="text" class="form-control">
+        </div> -->
+        <h5 class="mt-2">Tip Percentage</h5>
         <div>
             <input type="radio" id="5" value=".05" v-model="tipChoice">
-            <label for="5">5</label>
+            <label class="mr-2" for="5">5%</label>
             <input type="radio" id="10" value=".10" v-model="tipChoice">
-            <label for="10">10</label>
+            <label class="mr-2" for="10">10%</label>
             <input type="radio" id="15" value=".15" v-model="tipChoice">
-            <label for="15">15</label>
+            <label class="mr-2" for="15">15%</label>
             <input type="radio" id="20" value=".20" v-model="tipChoice">
-            <label for="20">20</label>
+            <label class="mr-2" for="20">20%</label>
             <input type="radio" id="25" value=".25" v-model="tipChoice">
-            <label for="25">25</label>
+            <label class="mr-2" for="25">25%</label>
             <input type="radio" id="30" value=".30" v-model="tipChoice">
-            <label for="25">30</label>
+            <label for="25">30%</label>
         </div>
-        <button v-on:click="calculateTip">Calculate</button>
-        <h4>Tip Amount</h4>
+        <button class="btn btn-sm btn-primary" v-on:click="calculateTip">Calculate</button>
+        <h5 class="mt-2">Tip Amount</h5>
         <p>{{ tipAmount }}</p>
-        <h4>Total Bill</h4>
+        <h5 class="mt-2">Total Bill</h5>
         <p>{{ totalBill }}</p>
 
     </div>
