@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title></title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="main.css">
+</head>
+
+<body>
+    <div id="calculator">
+        <h4>Bill Amount</h4>
+        <input type="number" min="1" max="1000000" v-model.number="bill">
+        <h4>Tip Percentage</h4>
+        <div>
+            <input type="radio" id="5" value=".05" v-model="tipChoice">
+            <label for="5">5</label>
+            <input type="radio" id="10" value=".10" v-model="tipChoice">
+            <label for="10">10</label>
+            <input type="radio" id="15" value=".15" v-model="tipChoice">
+            <label for="15">15</label>
+            <input type="radio" id="20" value=".20" v-model="tipChoice">
+            <label for="20">20</label>
+            <input type="radio" id="25" value=".25" v-model="tipChoice">
+            <label for="25">25</label>
+            <input type="radio" id="30" value=".30" v-model="tipChoice">
+            <label for="25">30</label>
+        </div>
+        <button v-on:click="calculateTip">Calculate</button>
+        <h4>Tip Amount</h4>
+        <p>{{ tipAmount }}</p>
+        <h4>Total Bill</h4>
+        <p>{{ totalBill }}</p>
+
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+    <script src="index.js" async defer></script>
+</body>
+
+</html>
