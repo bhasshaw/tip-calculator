@@ -1,4 +1,19 @@
 body{
-    background-color: black;
+    background-color: rgb(67, 230, 89);
+}
+.calc-container{
     color: white;
+}
+.bill{
+    border-radius: 5px;
+    border: none;
+    color: white;
+    background-color: rgb(67, 230, 89);
+    width: 75px;
+}
+.bill::placeholder {
+    color: white;
+  }
+input:focus{
+    outline: none;
 }

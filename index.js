@@ -2,9 +2,9 @@ let calculator = new Vue({
     el: '#calculator',
     data: {
       bill: null,
-      tipChoice: null,
-      tipAmount: null,
-      totalBill: null
+      tipChoice: 0,
+      tipAmount: 0,
+      totalBill: 0
     },
     methods: {
       calculateTip: function () {
