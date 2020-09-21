@@ -1,19 +1,12 @@
 body{
-    background-color: rgb(67, 230, 89);
-}
-.calc-container{
-    color: white;
+    background-color: rgb(174, 240, 182);
 }
 .bill{
     border-radius: 5px;
     border: none;
-    color: white;
-    background-color: rgb(67, 230, 89);
+    color: black;
     width: 75px;
 }
-.bill::placeholder {
-    color: white;
-  }
 input:focus{
     outline: none;
 }
